@@ -14,6 +14,8 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import { VISION_KEY } from './../../keys/google';
+
 
 // css
 import 'react-image-crop/dist/ReactCrop.css';
@@ -176,7 +178,7 @@ class TemplateCreate extends Component {
 
 
     recognizeImg(image, typeCrop) {
-        axios.post("https://vision.googleapis.com/v1/images:annotate?key=AIzaSyAlcOAZE9ezLzsraY7s4SluYj0KXXMCujY",
+        axios.post(`https://vision.googleapis.com/v1/images:annotate?key=${VISION_KEY}`,
             {
                 "requests": [
                     {

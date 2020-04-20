@@ -1,0 +1,1 @@
+export const VISION_KEY = 'EXAMPLE';
